@@ -1,0 +1,120 @@
+:root {
+  --primary: green;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout de cards */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  flex: 1 1 300px;
+  width: 300px;
+  min-height: 180px;
+  background: #f4f4f4;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal */
+}
+
+/* Halo detrás */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -10px; /* sale fuera de la card */
+  background: rgba(0, 128, 0, 0.4);
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+/* Responsive grid */
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Botón */
+.btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+/* Hover animation */
+.btn:hover {
+  transform: scale(1.1);
+  background: darkgreen;
+}
+
+.btn-danger {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  background: #e63946;
+  text-align: center;
+}
+
+.btn-danger:hover {
+  background: #c1121f;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* mensaje oculto */
+.message {
+  display: none;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* 👇 magia */
+#final:target {
+  display: block;
+}
+
+/* ocultar todo lo demás cuando aparece el mensaje */
+#final:target ~ .container,
+#final:target ~ .btn-danger {
+  display: none;
+}

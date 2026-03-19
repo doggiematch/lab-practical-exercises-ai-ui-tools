@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Landing Page | LLM Comparison</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --green: #4caf50;
+        --green-dark: #388e3c;
+        --green-light: #a5d6a7;
+        --dark: #1a1a1a;
+        --gray: #2e2e2e;
+        --gray-light: #f5f5f5;
+        --white: rgb(231, 231, 231);
+        --green-light-transparent: #a5d6a7c0;
+      }
+
+      body {
+        font-family: "Lexend Deca", sans-serif;
+        background: var(--dark);
+        color: var(--green-light);
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 2rem;
+      }
+
+      .cards {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      .card {
+        position: relative;
+        display: inline-block;
+        width: 250px;
+        margin: 10px;
+        box-shadow: var(--green-light-transparent) 0px 5px 15px; /* extraído y modificado de https://getcssscan.com/css-box-shadow-examples*/
+        padding: 20px;
+        background: var(--gray-light);
+        border-radius: 4px;
+      }
+
+      .card h3 {
+        color: var(--gray);
+      }
+
+      .card img {
+        width: 50px;
+      }
+
+      .version {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: var(--white);
+        color: var(--gray);
+        padding: 3px 8px;
+        font-size: 12px;
+        border-radius: 4px;
+      }
+
+      a {
+        display: block;
+        margin-top: 10px;
+        background: var(--green-dark);
+        color: var(--gray-light);
+        padding: 8px;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+      }
+
+      a:hover {
+        transform: scale(1.05);
+      }
+
+      footer {
+        position: fixed;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+      }
+
+      footer p {
+        font-weight: lighter;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>LLM Comparison</h1>
+
+    <div class="cards">
+      <div class="card">
+        <span class="version">v5.3</span>
+        <img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg"
+          alt="ChatGPT"
+        />
+        <h3>ChatGPT</h3>
+        <a href="chatgpt_landing.html">View</a>
+      </div>
+
+      <div class="card">
+        <span class="version">v4.6</span>
+        <img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg"
+          alt="Claude"
+        />
+        <h3>Claude</h3>
+        <a href="claude_landing.html">View</a>
+      </div>
+
+      <div class="card">
+        <span class="version">Pro</span>
+        <img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg"
+          alt="Gemini"
+        />
+        <h3>Gemini</h3>
+        <a href="gemini_landing.html">View</a>
+      </div>
+    </div>
+    <footer>
+      <p>© 2026 <strong>Jeannette Lindgreen García</strong></p>
+    </footer>
+  </body>
+</html>
